@@ -1,20 +1,26 @@
 import Image from "next/image";
 
 const principles = [
-  "Everybody belongs.",
-  "We communicate.",
-  "We look out for each other.",
-  "We ride with respect for nature.",
-  "We build community, not ego.",
-  "We keep improving. Always."
+  ["Everybody belongs.", "Different bodies, backgrounds, ages, paces and levels of experience are welcome."],
+  ["We communicate.", "We speak clearly, listen and make sure nobody is left guessing."],
+  ["We look out for each other.", "We wait, help and arrive together."],
+  ["We ride with respect for nature.", "We choose responsible routes, materials and decisions."],
+  ["We build community, not ego.", "People matter more than status, equipment or performance."],
+  ["We keep improving. Always.", "We stay open, learn and hold ourselves accountable."]
+];
+
+const products = [
+  ["Core Jersey", "jersey"],
+  ["Core Bib", "bib"],
+  ["Ride Cap", "cap"]
 ];
 
 export default function Home() {
   return (
     <>
       <header className="header">
-        <a href="#top" className="logo">BE:LON</a>
-        <nav>
+        <a className="logo" href="#top">BE:LON</a>
+        <nav aria-label="Main navigation">
           <a href="#manifesto">Manifesto</a>
           <a href="#constitution">Constitution</a>
           <a href="#collective">Collective</a>
@@ -22,105 +28,116 @@ export default function Home() {
           <a href="#rides">Rides</a>
           <a href="#join">Journal</a>
         </nav>
-        <a href="#join" className="joinTop">Join us</a>
+        <a className="joinTop" href="#join">Join us →</a>
       </header>
 
       <main id="top">
         <section className="hero">
-          <Image src="/hero.jpg" alt="A diverse cycling group in the mountains" fill priority className="cover" />
-          <div className="shade" />
-          <div className="heroText">
+          <Image src="/hero.jpg" alt="A diverse group of cyclists riding together in the mountains" fill priority sizes="100vw" className="cover heroPhoto" />
+          <div className="heroShade" />
+          <div className="heroCopy">
             <h1>Ride together.</h1>
             <p>Everyone belongs. Nobody gets dropped.</p>
-            <a className="button" href="#manifesto">This is BE:LON →</a>
+            <a className="buttonLight" href="#manifesto">This is BE:LON →</a>
           </div>
-          <span className="scroll">Scroll down ↓</span>
+          <a className="scrollHint" href="#manifesto">Scroll down ↓</a>
         </section>
 
         <section id="manifesto" className="manifesto">
           <div className="manifestoCopy">
-            <span className="label">01 / Manifesto</span>
-            <h2>We wait.<br/>We greet.<br/>We bring<br/>someone along.</h2>
+            <p className="label">01 / Manifesto</p>
+            <h2>We wait.<br />We greet.<br />We bring<br />someone along.</h2>
             <p>We create clothing not to show who belongs, but as a sign that everyone can belong. Maybe you buy a jersey. Maybe you do not. What matters is that you ride again tomorrow — and bring someone with you.</p>
-            <a href="#constitution">Read our manifesto →</a>
+            <a className="textLink" href="#constitution">Read our manifesto →</a>
           </div>
-          <div className="imageBox">
-            <Image src="/penguins.jpg" alt="Two penguins in front of mountains" fill className="cover" />
+          <div className="manifestoVisual">
+            <Image src="/penguins.jpg" alt="Two penguins standing together before a mountain landscape" fill sizes="65vw" className="cover" />
           </div>
         </section>
 
         <section id="constitution" className="constitution">
           <div className="constitutionIntro">
-            <span className="label light">02 / Constitution</span>
-            <h2>Our principles<br/>guide everything we do.</h2>
+            <p className="label labelLight">02 / Constitution</p>
+            <h2>Our principles<br />guide everything we do.</h2>
             <p>The BE:LON Constitution is our foundation. It defines how we ride, how we make decisions and how we treat people and the planet.</p>
-            <a href="#collective">Read the constitution →</a>
+            <a className="textLink lightLink" href="#collective">Read the constitution →</a>
           </div>
           <div className="principles">
-            {principles.map((p) => <article key={p}><span>○</span><h3>{p}</h3></article>)}
+            {principles.map(([title, text]) => (
+              <article key={title}>
+                <span className="principleIcon">○</span>
+                <h3>{title}</h3>
+                <p>{text}</p>
+              </article>
+            ))}
           </div>
         </section>
 
         <section id="collective" className="collective">
-          <div className="imageBox">
-            <Image src="/community.jpg" alt="Cyclists sharing food and coffee" fill className="cover" />
+          <div className="imagePanel communityImage">
+            <Image src="/community.jpg" alt="A diverse group of cyclists sharing food and conversation" fill sizes="46vw" className="cover" />
           </div>
           <div className="collectiveCopy">
-            <span className="label">03 / Collective</span>
-            <h2>People first.<br/>Always.</h2>
+            <p className="label">03 / Collective</p>
+            <h2>People first.<br />Always.</h2>
             <p>We are a global community of riders who support each other on and off the bike. Join the ride.</p>
-            <a href="#rides">Meet the community →</a>
+            <a className="textLink" href="#rides">Meet the community →</a>
           </div>
-          <div className="imageBox">
-            <Image src="/hug.jpg" alt="Two cyclists hugging" fill className="cover" />
+          <div className="imagePanel hugImage">
+            <Image src="/hug.jpg" alt="Two cyclists hugging after a ride" fill sizes="34vw" className="cover" />
           </div>
         </section>
 
         <section className="impactRides">
-          <div className="textPanel">
-            <span className="label">04 / Ride It Forward</span>
+          <article className="textTile">
+            <p className="label">04 / Ride It Forward</p>
             <h2>Your ride can change another person’s path.</h2>
             <p>Add €5 to your order or donate any amount. One hundred percent goes into the BE:LON Fund to support initiatives that make cycling more accessible.</p>
-            <a href="#join">See the impact →</a>
+            <a className="textLink" href="#join">See the impact →</a>
+          </article>
+          <div className="imagePanel">
+            <Image src="/forward.jpg" alt="A cyclist looking over a mountain landscape at sunset" fill sizes="22vw" className="cover" />
           </div>
-          <div className="imageBox"><Image src="/forward.jpg" alt="Cyclist overlooking mountains" fill className="cover" /></div>
-          <div id="rides" className="textPanel">
-            <span className="label">05 / Rides</span>
-            <h2>Start where<br/>you are.</h2>
+          <article id="rides" className="textTile">
+            <p className="label">05 / Rides</p>
+            <h2>Start where<br />you are.</h2>
             <p>No-drop rides. Different paces. Real conversations. Good coffee. New places. New people.</p>
-            <a href="#join">Upcoming rides →</a>
+            <a className="textLink" href="#join">Upcoming rides →</a>
+          </article>
+          <div className="imagePanel">
+            <Image src="/rides.jpg" alt="A group of cyclists riding along a mountain road" fill sizes="34vw" className="cover" />
           </div>
-          <div className="imageBox"><Image src="/rides.jpg" alt="A group ride by the mountains" fill className="cover" /></div>
         </section>
 
         <section id="shop" className="shop">
           <div className="shopIntro">
-            <span className="label">06 / Shop</span>
-            <h2>Essentials<br/>for the ride.</h2>
+            <p className="label">06 / Shop</p>
+            <h2>Essentials<br />for the ride.</h2>
             <p>Thoughtful products. Responsible materials. Made in Europe. For the roads and the moments that matter.</p>
-            <a href="#join">View collection →</a>
+            <a className="textLink" href="#join">View collection →</a>
           </div>
-          <div className="products">
-            <article><div className="product jersey">BE:LON</div><h3>Core Jersey</h3><p>Coming soon</p></article>
-            <article><div className="product bib">BE:LON</div><h3>Core Bib</h3><p>Coming soon</p></article>
-            <article><div className="product cap">BE:LON</div><h3>Ride Cap</h3><p>Coming soon</p></article>
+          <div className="productGrid">
+            {products.map(([name, cls]) => (
+              <article key={name}>
+                <div className={`productVisual ${cls}`}><span>BE:LON</span></div>
+                <h3>{name}</h3>
+                <p>Coming soon</p>
+              </article>
+            ))}
           </div>
         </section>
 
         <section id="join" className="join">
-          <div className="joinVisual">
-            <Image src="/mountains.jpg" alt="Mountain landscape" fill className="cover" />
-            <div className="shade" />
-            <div>
-              <span className="label light">07 / Join us</span>
-              <h2>Stories. Rides.<br/>New products. Good people.</h2>
-            </div>
+          <div className="joinCopy">
+            <p className="label">07 / Join us</p>
+            <h2>Stories. Rides. New products. Good people.</h2>
           </div>
           <div className="joinForm">
             <p>Stay in the loop and be the first to know what’s next.</p>
             <form action="mailto:hello@beloncollective.com" method="post">
-              <input type="email" placeholder="Your email address" required />
-              <button>Join us</button>
+              <label className="srOnly" htmlFor="email">Email address</label>
+              <input id="email" name="email" type="email" placeholder="Your email address" required />
+              <button type="submit">Join us</button>
             </form>
             <small>✓ No spam. Unsubscribe anytime.</small>
           </div>
@@ -129,8 +146,14 @@ export default function Home() {
 
       <footer>
         <strong>BE:LON</strong>
-        <nav><a href="#manifesto">Manifesto</a><a href="#constitution">Constitution</a><a href="#collective">Collective</a><a href="#shop">Shop</a><a href="#rides">Rides</a></nav>
-        <span>© {new Date().getFullYear()} BE:LON</span>
+        <nav>
+          <a href="#manifesto">Manifesto</a>
+          <a href="#constitution">Constitution</a>
+          <a href="#collective">Collective</a>
+          <a href="#shop">Shop</a>
+          <a href="#rides">Rides</a>
+        </nav>
+        <span>© {new Date().getFullYear()} BE:LON Collective</span>
       </footer>
     </>
   );

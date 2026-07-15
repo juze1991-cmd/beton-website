@@ -1,14 +1,12 @@
-# BE:LON Collective Website V3
+# BE:LON Collective – Approved Design
 
-Komplettes GitHub-/Vercel-Projekt.
+Diese Version ist nach dem freigegebenen Entwurf aufgebaut.
 
-## Upload
+## Upload in GitHub
 1. ZIP entpacken.
-2. Alle bisherigen Dateien im GitHub-Repository löschen.
-3. Den Inhalt dieses Ordners hochladen.
-4. `package-lock.json` ist bewusst nicht enthalten.
-5. Vercel baut nach dem Commit automatisch neu.
+2. GitHub → Add file → Upload files.
+3. Den gesamten Inhalt hochladen.
+4. Gleichnamige Dateien werden ersetzt.
+5. Commit changes.
 
-Die Domain-Einstellung in Vercel bleibt bestehen.
-
-Hinweis: Das Newsletter-Formular öffnet aktuell das E-Mail-Programm. Eine echte Newsletter-Anbindung folgt separat.
+Eine package-lock.json ist bewusst nicht enthalten.
