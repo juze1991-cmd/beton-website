@@ -1,12 +1,12 @@
-# BE:LON Collective – Approved Design
+# BE:LON Collective V5
 
-Diese Version ist nach dem freigegebenen Entwurf aufgebaut.
+Komplette GitHub-/Vercel-Version nach dem freigegebenen Design.
 
-## Upload in GitHub
+## Hochladen
 1. ZIP entpacken.
 2. GitHub → Add file → Upload files.
 3. Den gesamten Inhalt hochladen.
 4. Gleichnamige Dateien werden ersetzt.
 5. Commit changes.
 
-Eine package-lock.json ist bewusst nicht enthalten.
+`package-lock.json` ist bewusst nicht enthalten.

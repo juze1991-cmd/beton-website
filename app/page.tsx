@@ -12,7 +12,8 @@ const principles = [
 const products = [
   ["Core Jersey", "jersey"],
   ["Core Bib", "bib"],
-  ["Ride Cap", "cap"]
+  ["Ride Cap", "cap"],
+  ["Core Socks", "socks"]
 ];
 
 export default function Home() {
@@ -28,7 +29,7 @@ export default function Home() {
           <a href="#rides">Rides</a>
           <a href="#join">Journal</a>
         </nav>
-        <a className="joinTop" href="#join">Join us →</a>
+        <a className="joinTop" href="#join">Join us</a>
       </header>
 
       <main id="top">
@@ -36,8 +37,8 @@ export default function Home() {
           <Image src="/hero.jpg" alt="A diverse group of cyclists riding together in the mountains" fill priority sizes="100vw" className="cover heroPhoto" />
           <div className="heroShade" />
           <div className="heroCopy">
-            <h1>Ride together.</h1>
-            <p>Everyone belongs. Nobody gets dropped.</p>
+            <h1>Ride<br />together.</h1>
+            <p>Everyone belongs.<br />Nobody gets dropped.</p>
             <a className="buttonLight" href="#manifesto">This is BE:LON →</a>
           </div>
           <a className="scrollHint" href="#manifesto">Scroll down ↓</a>
@@ -58,33 +59,35 @@ export default function Home() {
         <section id="constitution" className="constitution">
           <div className="constitutionIntro">
             <p className="label labelLight">02 / Constitution</p>
-            <h2>Our principles<br />guide everything we do.</h2>
+            <h2>Our principles<br />guide everything<br />we do.</h2>
             <p>The BE:LON Constitution is our foundation. It defines how we ride, how we make decisions and how we treat people and the planet.</p>
             <a className="textLink lightLink" href="#collective">Read the constitution →</a>
           </div>
-          <div className="principles">
-            {principles.map(([title, text]) => (
-              <article key={title}>
-                <span className="principleIcon">○</span>
-                <h3>{title}</h3>
-                <p>{text}</p>
-              </article>
-            ))}
+          <div className="constitutionRight">
+            <div className="principles">
+              {principles.map(([title, text]) => (
+                <article key={title}>
+                  <span className="principleIcon">○</span>
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                </article>
+              ))}
+            </div>
+            <div className="coffeeImage">
+              <Image src="/coffee.jpg" alt="Cyclists sharing coffee and conversation after a ride" fill sizes="40vw" className="cover" />
+            </div>
           </div>
         </section>
 
         <section id="collective" className="collective">
-          <div className="imagePanel communityImage">
-            <Image src="/community.jpg" alt="A diverse group of cyclists sharing food and conversation" fill sizes="46vw" className="cover" />
-          </div>
           <div className="collectiveCopy">
-            <p className="label">03 / Collective</p>
+            <p className="label labelLight">03 / Collective</p>
             <h2>People first.<br />Always.</h2>
             <p>We are a global community of riders who support each other on and off the bike. Join the ride.</p>
-            <a className="textLink" href="#rides">Meet the community →</a>
+            <a className="textLink lightLink" href="#rides">Meet the community →</a>
           </div>
-          <div className="imagePanel hugImage">
-            <Image src="/hug.jpg" alt="Two cyclists hugging after a ride" fill sizes="34vw" className="cover" />
+          <div className="collectiveImage">
+            <Image src="/collective-hug.jpg" alt="Two cyclists hugging after a ride" fill sizes="70vw" className="cover" />
           </div>
         </section>
 
@@ -96,7 +99,7 @@ export default function Home() {
             <a className="textLink" href="#join">See the impact →</a>
           </article>
           <div className="imagePanel">
-            <Image src="/forward.jpg" alt="A cyclist looking over a mountain landscape at sunset" fill sizes="22vw" className="cover" />
+            <Image src="/forward.jpg" alt="A cyclist looking over a mountain landscape at sunset" fill sizes="25vw" className="cover" />
           </div>
           <article id="rides" className="textTile">
             <p className="label">05 / Rides</p>
@@ -105,7 +108,7 @@ export default function Home() {
             <a className="textLink" href="#join">Upcoming rides →</a>
           </article>
           <div className="imagePanel">
-            <Image src="/rides.jpg" alt="A group of cyclists riding along a mountain road" fill sizes="34vw" className="cover" />
+            <Image src="/rides.jpg" alt="A group of cyclists riding along a mountain road" fill sizes="35vw" className="cover" />
           </div>
         </section>
 
@@ -128,9 +131,13 @@ export default function Home() {
         </section>
 
         <section id="join" className="join">
-          <div className="joinCopy">
-            <p className="label">07 / Join us</p>
-            <h2>Stories. Rides. New products. Good people.</h2>
+          <div className="joinVisual">
+            <Image src="/mountains.jpg" alt="Mountain landscape" fill sizes="50vw" className="cover" />
+            <div className="joinShade" />
+            <div className="joinCopy">
+              <p className="label labelLight">07 / Join us</p>
+              <h2>Stories. Rides.<br />New products. Good people.</h2>
+            </div>
           </div>
           <div className="joinForm">
             <p>Stay in the loop and be the first to know what’s next.</p>
