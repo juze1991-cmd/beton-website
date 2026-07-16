@@ -52,7 +52,7 @@ export default function Home() {
             <a className="textLink" href="#constitution">Read our manifesto →</a>
           </div>
           <div className="manifestoVisual">
-            <Image src="/penguins.jpg" alt="Two penguins standing together before a mountain landscape" fill sizes="65vw" className="cover" />
+            <Image src="/penguins.jpg.png" alt="Two penguins standing together before a mountain landscape" fill sizes="65vw" className="cover" />
           </div>
         </section>
 
