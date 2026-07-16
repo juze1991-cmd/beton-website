@@ -73,9 +73,6 @@ export default function Home() {
                 </article>
               ))}
             </div>
-            <div className="coffeeImage">
-              <Image src="/coffee.jpg" alt="Cyclists sharing coffee and conversation after a ride" fill sizes="40vw" className="cover" />
-            </div>
           </div>
         </section>
 

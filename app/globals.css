@@ -35,7 +35,7 @@ a{color:inherit;text-decoration:none}
 .constitutionIntro{padding:34px 3.2vw}
 .constitutionIntro>p:not(.label){max-width:390px;font-size:.82rem;line-height:1.45}
 .constitutionIntro h2{font-size:clamp(2.3rem,3.6vw,4rem)}
-.constitutionRight{display:grid;grid-template-columns:1.1fr .9fr}
+.constitutionRight{display:block}
 .principles{display:grid;grid-template-columns:repeat(3,1fr);padding:24px}
 .principles article{padding:18px;border-right:1px solid rgba(255,255,255,.22);border-bottom:1px solid rgba(255,255,255,.22)}
 .principles article:nth-child(3n){border-right:0}
@@ -43,7 +43,7 @@ a{color:inherit;text-decoration:none}
 .principleIcon{font-size:1.2rem}
 .principles h3{margin:7px 0 4px;font-size:.8rem}
 .principles p{margin:0;color:rgba(255,255,255,.65);font-size:.68rem;line-height:1.35}
-.coffeeImage{position:relative;min-height:100%}
+
 .collective{display:grid;grid-template-columns:.34fr 1.66fr;min-height:430px;background:#101812;color:white}
 .collectiveCopy{display:flex;padding:36px 3.2vw;flex-direction:column;justify-content:flex-end}
 .collectiveCopy h2{font-size:clamp(3rem,4.8vw,5.2rem)}
@@ -88,7 +88,7 @@ footer span{justify-self:end;color:rgba(255,255,255,.55);font-size:.57rem}
 @media(max-width:1000px){
   .header{grid-template-columns:1fr auto}.header nav{display:none}
   .manifesto,.constitution,.collective,.impactRides,.shop,.join{grid-template-columns:1fr}
-  .constitutionRight{grid-template-columns:1fr}
+  .constitutionRight{display:block}
   .coffeeImage,.manifestoVisual,.collectiveImage,.imagePanel{min-height:360px}
   .principles{grid-template-columns:1fr 1fr}
   .productGrid{grid-template-columns:1fr 1fr}
