@@ -34,7 +34,7 @@ export default function Home() {
 
       <main id="top">
         <section className="hero">
-          <Image src="/hero.jpg" alt="A diverse group of cyclists riding together in the mountains" fill priority sizes="100vw" className="cover heroPhoto" />
+          <Image src="/hero.jpg.png" alt="A diverse group of cyclists riding together in the mountains" fill priority sizes="100vw" className="cover heroPhoto" />
           <div className="heroShade" />
           <div className="heroCopy">
             <h1>Ride<br />together.</h1>
