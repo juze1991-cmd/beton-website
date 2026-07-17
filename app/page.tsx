@@ -129,7 +129,7 @@ export default function Home() {
 
         <section id="join" className="join">
           <div className="joinVisual">
-            <Image src="/mountains.jpg.png" alt="Mountain landscape" fill sizes="50vw" className="cover" />
+            <Image src="/Mountains.jpg.png" alt="Mountain landscape" fill sizes="50vw" className="cover" />
             <div className="joinShade" />
             <div className="joinCopy">
               <p className="label labelLight">07 / Join us</p>
