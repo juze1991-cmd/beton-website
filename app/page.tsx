@@ -96,7 +96,7 @@ export default function Home() {
             <a className="textLink" href="#join">See the impact →</a>
           </article>
           <div className="imagePanel">
-            <Image src="/forward.jpg" alt="A cyclist looking over a mountain landscape at sunset" fill sizes="25vw" className="cover" />
+            <Image src="/forward.jpg.png" alt="A cyclist looking over a mountain landscape at sunset" fill sizes="25vw" className="cover" />
           </div>
           <article id="rides" className="textTile">
             <p className="label">05 / Rides</p>
