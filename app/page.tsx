@@ -105,7 +105,7 @@ export default function Home() {
             <a className="textLink" href="#join">Upcoming rides →</a>
           </article>
           <div className="imagePanel">
-            <Image src="/rides.jpg" alt="A group of cyclists riding along a mountain road" fill sizes="35vw" className="cover" />
+            <Image src="/rides.jpg.png" alt="A group of cyclists riding along a mountain road" fill sizes="35vw" className="cover" />
           </div>
         </section>
 
