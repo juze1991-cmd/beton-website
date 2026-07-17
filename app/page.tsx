@@ -84,7 +84,7 @@ export default function Home() {
             <a className="textLink lightLink" href="#rides">Meet the community →</a>
           </div>
           <div className="collectiveImage">
-            <Image src="/collective-hug.jpg" alt="Two cyclists hugging after a ride" fill sizes="70vw" className="cover" />
+            <Image src="/collective.jpg.png" alt="Two cyclists hugging after a ride" fill sizes="70vw" className="cover" />
           </div>
         </section>
 
