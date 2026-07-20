@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const principles = [
   ["Everybody belongs.", "Different bodies, backgrounds, ages, paces and levels of experience are welcome."],
@@ -22,7 +23,7 @@ export default function Home() {
       <header className="header">
         <a className="logo" href="#top">BE:LON</a>
         <nav aria-label="Main navigation">
-          <a href="#manifesto">Manifesto</a>
+          <Link href="/manifesto">Manifesto</Link>
           <a href="#constitution">Constitution</a>
           <a href="#collective">Collective</a>
           <a href="#shop">Shop</a>
