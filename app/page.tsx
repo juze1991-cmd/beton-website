@@ -50,7 +50,9 @@ export default function Home() {
             <p className="label">01 / Manifesto</p>
             <h2>We wait.<br />We greet.<br />We bring<br />someone along.</h2>
             <p>We create clothing not to show who belongs, but as a sign that everyone can belong. Maybe you buy a jersey. Maybe you do not. What matters is that you ride again tomorrow — and bring someone with you.</p>
-            <a className="textLink" href="#constitution">Read our manifesto →</a>
+            <Link className="textLink" href="/manifesto">
+    Read the Manifesto →
+</Link>
           </div>
           <div className="manifestoVisual">
             <Image src="/penguins.jpg.png" alt="Two penguins standing together before a mountain landscape" fill sizes="65vw" className="cover" />
