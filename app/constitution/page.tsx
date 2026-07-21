@@ -2,6 +2,15 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "./page.module.css";
 
+const navigation = [
+  { label: "Manifesto", href: "/manifesto" },
+  { label: "Constitution", href: "/constitution" },
+  { label: "Collective", href: "/collective" },
+  { label: "Ride It Forward", href: "/ride-it-forward" },
+  { label: "Journal", href: "/journal" },
+  { label: "Shop", href: "/shop" },
+];
+
 const principles = [
   {
     number: "01",
