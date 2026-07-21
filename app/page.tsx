@@ -64,7 +64,9 @@ export default function Home() {
             <p className="label labelLight">02 / Constitution</p>
             <h2>Our principles<br />guide everything<br />we do.</h2>
             <p>The BE:LON Constitution is our foundation. It defines how we ride, how we make decisions and how we treat people and the planet.</p>
-            <a className="textLink lightLink" href="#collective">Read the constitution →</a>
+            <Link className="textLink lightLink" href="/constitution">
+  Read the Constitution →
+</Link>
           </div>
           <div className="constitutionRight">
             <div className="principles">
