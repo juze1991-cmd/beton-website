@@ -1,1 +1,226 @@
+.page {
+  background: #f3efe7;
+  color: #173b35;
+}
 
+/* ---------- HERO ---------- */
+
+.hero {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  min-height: 92vh;
+}
+
+.heroCopy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 7vw;
+}
+
+.label,
+.sectionLabel {
+  margin: 0 0 28px;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(4rem, 8vw, 8rem);
+  line-height: .9;
+  letter-spacing: -.06em;
+  font-weight: 600;
+}
+
+.heroText {
+  max-width: 520px;
+  margin-top: 42px;
+  font-size: clamp(1rem, 1.4vw, 1.3rem);
+  line-height: 1.7;
+}
+
+.heroVisual {
+  position: relative;
+  min-height: 92vh;
+}
+
+.cover {
+  object-fit: cover;
+}
+
+/* ---------- INTRO ---------- */
+
+.intro {
+  display: grid;
+  grid-template-columns: .6fr 1.4fr;
+  gap: 8vw;
+  padding: 10vw 6vw;
+}
+
+.intro h2 {
+  max-width: 900px;
+  margin: 0;
+  font-size: clamp(3rem, 6vw, 6rem);
+  line-height: .95;
+  letter-spacing: -.05em;
+}
+
+.intro p {
+  max-width: 760px;
+  margin-top: 32px;
+  font-size: 1.08rem;
+  line-height: 1.8;
+}
+
+/* ---------- VALUES ---------- */
+
+.values {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  border-top: 1px solid rgba(23,59,53,.15);
+}
+
+.valueCard {
+  padding: 5vw;
+  min-height: 360px;
+  border-bottom: 1px solid rgba(23,59,53,.15);
+}
+
+.valueCard:nth-child(odd) {
+  border-right: 1px solid rgba(23,59,53,.15);
+}
+
+.valueCard span {
+  display: block;
+  margin-bottom: 60px;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .15em;
+}
+
+.valueCard h3 {
+  margin: 0;
+  font-size: clamp(2rem,4vw,4rem);
+  line-height: 1;
+  letter-spacing: -.04em;
+}
+
+.valueCard p {
+  margin-top: 26px;
+  max-width: 480px;
+  line-height: 1.7;
+}
+
+/* ---------- BELONGING ---------- */
+
+.belonging {
+  padding: 10vw 6vw;
+}
+
+.belongingContent {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 8vw;
+}
+
+.belonging h2 {
+  margin: 0;
+  font-size: clamp(3rem,6vw,6rem);
+  line-height: .95;
+  letter-spacing: -.05em;
+}
+
+.belongingText p {
+  margin-top: 0;
+  margin-bottom: 32px;
+  font-size: 1.08rem;
+  line-height: 1.8;
+}
+
+/* ---------- FINAL ---------- */
+
+.statement {
+  padding: 10vw 6vw;
+  background: #173b35;
+  color: #f3efe7;
+}
+
+.statement h2 {
+  max-width: 1100px;
+  margin: 0;
+  font-size: clamp(3.5rem,8vw,8rem);
+  line-height: .92;
+  letter-spacing: -.06em;
+}
+
+.statement p:not(.label) {
+  max-width: 620px;
+  margin-top: 42px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.backLink {
+  display: inline-block;
+  margin-top: 60px;
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 6px;
+  font-weight: 600;
+  transition: .2s;
+}
+
+.backLink:hover {
+  opacity: .7;
+  transform: translateX(-4px);
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 900px){
+
+.hero{
+    grid-template-columns:1fr;
+}
+
+.heroVisual{
+    min-height:60vh;
+    order:-1;
+}
+
+.heroCopy{
+    padding:80px 24px;
+}
+
+.intro{
+    grid-template-columns:1fr;
+    padding:100px 24px;
+}
+
+.values{
+    grid-template-columns:1fr;
+}
+
+.valueCard{
+    border-right:none !important;
+    min-height:auto;
+    padding:70px 24px;
+}
+
+.belonging{
+    padding:100px 24px;
+}
+
+.belongingContent{
+    grid-template-columns:1fr;
+}
+
+.statement{
+    padding:100px 24px;
+}
+
+}
