@@ -47,6 +47,27 @@ const principles = [
 export default function ConstitutionPage() {
   return (
     <main className={styles.page}>
+      <header className={styles.header}>
+  <Link href="/" className={styles.logo}>
+    BE:LON
+  </Link>
+
+  <nav className={styles.navigation} aria-label="Main navigation">
+    {navigation.map((item) => (
+      <Link
+        key={item.label}
+        href={item.href}
+        className={
+          item.href === "/constitution"
+            ? styles.activeNavigation
+            : undefined
+        }
+      >
+        {item.label}
+      </Link>
+    ))}
+  </nav>
+</header>
       <section className={styles.hero}>
         <Image
           src="/constitution-hero.jpg.png"
