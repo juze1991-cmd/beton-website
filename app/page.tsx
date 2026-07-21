@@ -24,7 +24,7 @@ export default function Home() {
         <a className="logo" href="#top">BE:LON</a>
         <nav aria-label="Main navigation">
           <Link href="/manifesto">Manifesto</Link>
-          <a href="#constitution">Constitution</a>
+          <Link href="/constitution">Constitution</Link>
           <a href="#collective">Collective</a>
           <a href="#shop">Shop</a>
           <a href="#rides">Rides</a>
