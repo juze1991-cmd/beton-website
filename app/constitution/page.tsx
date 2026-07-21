@@ -2,15 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "./page.module.css";
 
-const navigation = [
-  { label: "Manifesto", href: "/manifesto" },
-  { label: "Constitution", href: "/constitution" },
-  { label: "Collective", href: "/collective" },
-  { label: "Ride It Forward", href: "/ride-it-forward" },
-  { label: "Journal", href: "/journal" },
-  { label: "Shop", href: "/shop" },
-];
-
 const principles = [
   {
     number: "01",
@@ -47,27 +38,6 @@ const principles = [
 export default function ConstitutionPage() {
   return (
     <main className={styles.page}>
-      <header className={styles.header}>
-  <Link href="/" className={styles.logo}>
-    BE:LON
-  </Link>
-
-  <nav className={styles.navigation} aria-label="Main navigation">
-    {navigation.map((item) => (
-      <Link
-        key={item.label}
-        href={item.href}
-        className={
-          item.href === "/constitution"
-            ? styles.activeNavigation
-            : undefined
-        }
-      >
-        {item.label}
-      </Link>
-    ))}
-  </nav>
-</header>
       <section className={styles.hero}>
         <Image
           src="/constitution-hero.jpg.png"
