@@ -2,48 +2,86 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "./page.module.css";
 
+export const metadata = {
+  title: "Constitution | BE:LON Collective",
+  description:
+    "The principles that guide how BE:LON rides, acts and builds community.",
+};
+
+const navigation = [
+  { label: "Manifesto", href: "/manifesto" },
+  { label: "Constitution", href: "/constitution" },
+  { label: "Collective", href: "/collective" },
+  { label: "Ride It Forward", href: "/ride-it-forward" },
+  { label: "Journal", href: "/journal" },
+  { label: "Shop", href: "/shop" },
+];
+
 const principles = [
   {
     number: "01",
     title: "Everybody belongs.",
-    text: "Different bodies, backgrounds, ages, paces and levels of experience are welcome. Nobody has to prove that they deserve to be here."
+    text: "Different bodies, backgrounds, ages, paces and levels of experience are welcome. Nobody has to prove that they deserve to be here.",
   },
   {
     number: "02",
     title: "We communicate.",
-    text: "We speak clearly, listen carefully and make sure nobody is left guessing."
+    text: "We speak clearly, listen carefully and make sure nobody is left guessing.",
   },
   {
     number: "03",
     title: "We look out for each other.",
-    text: "We wait. We help. We check in. The ride is not complete until everyone has arrived."
+    text: "We wait. We help. We check in. The ride is not complete until everyone has arrived.",
   },
   {
     number: "04",
     title: "We ride with respect for nature.",
-    text: "The places we ride through are not a backdrop. We protect what allows us to ride."
+    text: "The places we ride through are not a backdrop. We protect what allows us to ride.",
   },
   {
     number: "05",
     title: "We build community, not ego.",
-    text: "People matter more than status, equipment or performance."
+    text: "People matter more than status, equipment or performance.",
   },
   {
     number: "06",
     title: "We keep improving. Always.",
-    text: "We stay curious, learn from mistakes and keep moving forward together."
-  }
+    text: "We stay curious, learn from mistakes and keep moving forward together.",
+  },
 ];
 
 export default function ConstitutionPage() {
   return (
     <main className={styles.page}>
+      <header className={styles.header}>
+        <Link href="/" className={styles.logo}>
+          BE:LON
+        </Link>
+
+        <nav className={styles.navigation} aria-label="Main navigation">
+          {navigation.map((item) => (
+            <Link
+              key={item.label}
+              href={item.href}
+              className={
+                item.href === "/constitution"
+                  ? styles.activeNavigation
+                  : undefined
+              }
+            >
+              {item.label}
+            </Link>
+          ))}
+        </nav>
+      </header>
+
       <section className={styles.hero}>
         <Image
           src="/constitution-hero.jpg.png"
           alt="Cyclists preparing for a ride"
           fill
           priority
+          sizes="100vw"
           className={styles.heroImage}
         />
 
@@ -61,9 +99,9 @@ export default function ConstitutionPage() {
           </h1>
 
           <p>
-            The BE:LON Constitution is not a marketing promise.
-            It is the standard we hold ourselves to —
-            on the road, in our community and in every decision we make.
+            The BE:LON Constitution is not a marketing promise. It is the
+            standard we hold ourselves to — on the road, in our community and
+            in every decision we make.
           </p>
         </div>
       </section>
@@ -73,8 +111,8 @@ export default function ConstitutionPage() {
 
         <p>
           A collective only works when people know what they can expect from
-          each other. These principles guide how we ride, communicate,
-          create products and build BE:LON.
+          each other. These principles guide how we ride, communicate, create
+          products and build BE:LON.
         </p>
       </section>
 
@@ -95,13 +133,13 @@ export default function ConstitutionPage() {
           This is the standard.
           <br />
           Not perfection —
+          <br />
           responsibility.
         </h2>
 
         <p>
-          We will make mistakes.
-          What matters is whether we listen,
-          learn and act.
+          We will make mistakes. What matters is whether we listen, learn and
+          act.
         </p>
 
         <Link href="/" className={styles.button}>
