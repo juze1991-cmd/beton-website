@@ -2,32 +2,69 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
 
+export const metadata = {
+  title: "Collective | BE:LON Collective",
+  description:
+    "The BE:LON Collective is a community for people who believe cycling becomes better when more people feel welcome.",
+};
+
+const navigation = [
+  { label: "Manifesto", href: "/manifesto" },
+  { label: "Constitution", href: "/constitution" },
+  { label: "Collective", href: "/collective" },
+  { label: "Ride It Forward", href: "/ride-it-forward" },
+  { label: "Journal", href: "/journal" },
+  { label: "Shop", href: "/shop" },
+];
+
 const values = [
   {
     number: "01",
     title: "Come as you are.",
-    text: "You do not need the fastest bike, the newest clothing or years of experience. Curiosity is enough."
+    text: "You do not need the fastest bike, the newest clothing or years of experience. Curiosity is enough.",
   },
   {
     number: "02",
     title: "Different paces belong together.",
-    text: "Some people ride fast. Some ride far. Some are just beginning. Nobody has to earn their place."
+    text: "Some people ride fast. Some ride far. Some are just beginning. Nobody has to earn their place.",
   },
   {
     number: "03",
     title: "We make room.",
-    text: "Belonging means noticing who is missing, listening carefully and creating space for more people."
+    text: "Belonging means noticing who is missing, listening carefully and creating space for more people.",
   },
   {
     number: "04",
     title: "We arrive together.",
-    text: "A good ride is not measured by who finishes first. It is measured by whether everyone felt part of it."
-  }
+    text: "A good ride is not measured by who finishes first. It is measured by whether everyone felt part of it.",
+  },
 ];
 
 export default function CollectivePage() {
   return (
     <main className={styles.page}>
+      <header className={styles.header}>
+        <Link href="/" className={styles.logo}>
+          BE:LON
+        </Link>
+
+        <nav className={styles.navigation} aria-label="Main navigation">
+          {navigation.map((item) => (
+            <Link
+              key={item.label}
+              href={item.href}
+              className={
+                item.href === "/collective"
+                  ? styles.activeNavigation
+                  : undefined
+              }
+            >
+              {item.label}
+            </Link>
+          ))}
+        </nav>
+      </header>
+
       <section className={styles.hero}>
         <div className={styles.heroCopy}>
           <p className={styles.label}>BE:LON Collective</p>
@@ -50,7 +87,7 @@ export default function CollectivePage() {
             alt="Two cyclists embracing after a shared ride"
             fill
             priority
-            sizes="55vw"
+            sizes="(max-width: 900px) 100vw, 55vw"
             className={styles.cover}
           />
         </div>
@@ -60,9 +97,7 @@ export default function CollectivePage() {
         <p className={styles.sectionLabel}>Why a collective?</p>
 
         <div>
-          <h2>
-            Because belonging does not happen by accident.
-          </h2>
+          <h2>Because belonging does not happen by accident.</h2>
 
           <p>
             Cycling can create friendship, confidence and freedom. But it can
@@ -92,9 +127,7 @@ export default function CollectivePage() {
         <p className={styles.sectionLabel}>Belonging in practice</p>
 
         <div className={styles.belongingContent}>
-          <h2>
-            You do not have to look like a cyclist to be one.
-          </h2>
+          <h2>You do not have to look like a cyclist to be one.</h2>
 
           <div className={styles.belongingText}>
             <p>
