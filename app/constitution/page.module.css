@@ -10,73 +10,65 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 50;
-  width: 100%;
-  min-height: 88px;
-  padding: 0 4vw;
+  z-index: 20;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
-  background: rgba(23, 59, 53, 0.88);
-  color: #f3efe7;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+
+  width: 100%;
+  padding: 28px 30px;
+
+  color: white;
 }
 
 .logo {
-  flex-shrink: 0;
-  color: inherit;
+  font-size: 1.55rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
   text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
 }
 
 .navigation {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  gap: clamp(18px, 2.2vw, 38px);
+  gap: 34px;
 }
 
 .navigation a {
   position: relative;
-  padding: 8px 0;
-  color: inherit;
-  text-decoration: none;
-  font-size: 0.82rem;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  opacity: 0.72;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
+  padding: 5px 0;
 
-.navigation a:hover {
-  opacity: 1;
+  color: inherit;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .navigation a::after {
-  content: "";
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: -7px;
   left: 0;
+
   height: 1px;
+
   background: currentColor;
+  content: "";
+  opacity: 0;
   transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.2s ease;
+  transform-origin: center;
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
 }
 
 .navigation a:hover::after,
 .navigation .activeNavigation::after {
-  transform: scaleX(1);
-  transform-origin: left;
-}
-
-.navigation .activeNavigation {
   opacity: 1;
+  transform: scaleX(1);
 }
 
 /* ---------- HERO ---------- */
