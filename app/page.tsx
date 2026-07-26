@@ -222,23 +222,24 @@ export default function Home() {
             />
           </div>
 
-          <article id="journal" className="textTile">
-            <p className="label">05 / Journal</p>
+         <article id="journal" className="textTile">
+  <p className="label">05 / Journal</p>
 
-            <h2>
-              Start where
-              <br />
-              you are.
-            </h2>
+  <h2>
+    Start where
+    <br />
+    you are.
+  </h2>
 
-            <p>
-              No-drop rides. Different paces. Real conversations. Good coffee.
-              New places. New people.
-            </p>
+  <p>
+    No-drop rides. Different paces. Real conversations. Good coffee.
+    New places. New people.
+  </p>
 
-            <a className="textLink" href="#join"> 
-              Read the journal → </a> 
-          </article>
+  <Link href="/journal" className="textLink">
+    Read the Journal →
+  </Link>
+</article>
 
           <div className="imagePanel">
             <Image
