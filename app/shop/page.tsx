@@ -16,7 +16,7 @@ const products = [
     subtitle: "For long rides, short rides and everything in between.",
     description:
       "A comfortable everyday jersey designed for real rides and different bodies. Clean, functional and free from unnecessary details.",
-    image: "/shop-jersey.webp",
+    image: "/shop-jersey.jpg.png",
     imageAlt: "BE:LON Core Jersey",
     material: "Technical recycled fabric",
     production: "Made in Europe",
@@ -28,7 +28,7 @@ const products = [
     subtitle: "Comfort that stays quiet.",
     description:
       "Supportive bib shorts built for everyday riding. Designed to feel comfortable without turning every ride into a performance test.",
-    image: "/shop-bib.webp",
+    image: "/shop-bib.jpg.png",
     imageAlt: "BE:LON Core Bib",
     material: "Durable stretch fabric",
     production: "Made in Europe",
@@ -40,7 +40,7 @@ const products = [
     subtitle: "A small part of every good ride.",
     description:
       "Simple cycling socks with a secure fit, breathable construction and no oversized branding.",
-    image: "/shop-socks.webp",
+    image: "/shop-socks.jpg.png",
     imageAlt: "BE:LON Core Socks",
     material: "Breathable performance yarn",
     production: "Made in Europe",
@@ -55,7 +55,7 @@ export default function ShopPage() {
 
       <section className={styles.hero}>
         <Image
-          src="/shop-hero.webp"
+          src="/shop-hero.jpg.png"
           alt="A diverse group of cyclists wearing BE:LON clothing"
           fill
           priority
