@@ -1,1 +1,156 @@
 
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 40px;
+
+  width: 100%;
+  padding: 28px 30px;
+
+  color: white;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 18, 12, 0.58) 0%,
+    rgba(10, 18, 12, 0.16) 65%,
+    transparent 100%
+  );
+}
+
+.logo {
+  color: inherit;
+  font-size: 1.55rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 34px;
+}
+
+.navigation a {
+  position: relative;
+
+  padding: 5px 0;
+
+  color: inherit;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  line-height: 1.2;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.navigation a::after {
+  position: absolute;
+  right: 0;
+  bottom: -7px;
+  left: 0;
+
+  height: 1px;
+
+  background: currentColor;
+  content: "";
+
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: center;
+
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+.navigation a:hover::after,
+.navigation .activeNavigation::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.joinButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 42px;
+  padding: 0 18px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+
+  color: inherit;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  transition:
+    background 180ms ease,
+    color 180ms ease;
+}
+
+.joinButton:hover {
+  background: white;
+  color: #18251b;
+}
+
+@media (max-width: 1150px) {
+  .header {
+    gap: 24px;
+  }
+
+  .navigation {
+    gap: 21px;
+  }
+
+  .navigation a {
+    font-size: 0.64rem;
+  }
+
+  .joinButton {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+}
+
+@media (max-width: 900px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 22px 20px;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .joinButton {
+    min-height: 38px;
+  }
+}
+
+@media (max-width: 560px) {
+  .logo {
+    font-size: 1.25rem;
+  }
+
+  .joinButton {
+    min-height: 36px;
+    padding-right: 12px;
+    padding-left: 12px;
+
+    font-size: 0.62rem;
+  }
+}
