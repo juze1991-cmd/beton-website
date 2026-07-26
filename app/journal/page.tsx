@@ -15,7 +15,7 @@ const stories = [
     category: "Community",
     description:
       "A ride is not defined by who arrives first, but by who arrives together.",
-    image: "/journal-story-wait.webp",
+    image: "/journal-story-wait.jpg.png",
     imageAlt: "Cyclists waiting together beside a quiet road",
     href: "/journal/why-we-wait",
   },
