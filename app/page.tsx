@@ -30,17 +30,17 @@ const products = [
   {
     name: "Core Jersey",
     image: "/shop-jersey.webp",
-    alt: "BE:LON Core Jersey worn by a cyclist",
+    alt: "BE:LON Core Jersey",
   },
   {
     name: "Core Bib",
     image: "/shop-bib.webp",
-    alt: "BE:LON Core Bib worn by a cyclist",
+    alt: "BE:LON Core Bib",
   },
   {
     name: "Core Socks",
     image: "/shop-socks.webp",
-    alt: "BE:LON Core Socks worn by a cyclist",
+    alt: "BE:LON Core Socks",
   },
 ];
 
