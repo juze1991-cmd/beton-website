@@ -253,7 +253,7 @@ export default function JournalPage() {
       <section className={styles.newsletter}>
         <div className={styles.newsletterImage}>
           <Image
-            src="/journal-newsletter.webp"
+            src="/journal-newsletter.jpg.png"
             alt="Two bicycles resting in a quiet landscape"
             fill
             sizes="(max-width: 900px) 100vw, 52vw"
