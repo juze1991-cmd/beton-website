@@ -221,8 +221,8 @@ export default function Home() {
             />
           </div>
 
-          <article id="rides" className="textTile">
-            <p className="label">05 / Rides</p>
+          <article id="journal" className="textTile">
+            <p className="label">05 / Journal</p>
 
             <h2>
               Start where
@@ -236,7 +236,7 @@ export default function Home() {
             </p>
 
             <a className="textLink" href="#join">
-              Upcoming rides →
+              Upcoming journal →
             </a>
           </article>
 
