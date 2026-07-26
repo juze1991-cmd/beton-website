@@ -27,10 +27,21 @@ const principles = [
 ];
 
 const products = [
-  ["Core Jersey", "jersey"],
-  ["Core Bib", "bib"],
-  ["Ride Cap", "cap"],
-  ["Core Socks", "socks"],
+  {
+    name: "Core Jersey",
+    image: "/shop-jersey.webp",
+    alt: "BE:LON Core Jersey worn by a cyclist",
+  },
+  {
+    name: "Core Bib",
+    image: "/shop-bib.webp",
+    alt: "BE:LON Core Bib worn by a cyclist",
+  },
+  {
+    name: "Core Socks",
+    image: "/shop-socks.webp",
+    alt: "BE:LON Core Socks worn by a cyclist",
+  },
 ];
 
 export default function Home() {
