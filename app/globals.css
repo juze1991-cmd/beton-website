@@ -1,113 +1,726 @@
-:root{
-  --ink:#111713;
-  --forest:#12281f;
-  --cream:#f4efe6;
-  --paper:#faf7f1;
-  --muted:#777b76;
+:root {
+  --ink: #111713;
+  --forest: #12281f;
+  --cream: #f4efe6;
+  --paper: #faf7f1;
+  --muted: #777b76;
 }
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}
-a{color:inherit;text-decoration:none}
-.cover{object-fit:cover}
-.header{position:absolute;z-index:20;inset:0 0 auto;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:18px 3.2vw;color:var(--ink)}
-.logo{font-size:1.55rem;font-weight:900}
-.header nav{display:flex;gap:28px;font-size:.64rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
-.joinTop{justify-self:end;padding:12px 22px;background:var(--forest);color:white;font-size:.64rem;font-weight:900;letter-spacing:.09em;text-transform:uppercase}
-.hero{position:relative;min-height:640px;height:55vw;max-height:780px;overflow:hidden}
-.heroPhoto{object-position:center 48%}
-.heroShade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,14,10,.58),rgba(6,14,10,.03) 68%),linear-gradient(0deg,rgba(6,14,10,.32),transparent 48%)}
-.heroCopy{position:absolute;z-index:2;left:3.2vw;bottom:58px;max-width:650px;color:white}
-.heroCopy h1{margin:0;font-size:clamp(4.2rem,7vw,7.4rem);line-height:.84;letter-spacing:-.065em}
-.heroCopy p{margin:22px 0 27px;font-size:1.2rem;line-height:1.45}
-.buttonLight{display:inline-block;padding:15px 22px;background:white;color:var(--ink);font-size:.65rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
-.scrollHint{position:absolute;z-index:2;right:3vw;bottom:30px;color:white;font-size:.63rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
-.label{margin:0 0 16px;font-size:.62rem;font-weight:900;letter-spacing:.11em;text-transform:uppercase}
-.labelLight{color:rgba(255,255,255,.72)}
-.textLink{display:inline-block;margin-top:15px;font-size:.62rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
-.lightLink{color:white}
-.manifesto{display:grid;grid-template-columns:.58fr 1.42fr;min-height:430px;background:var(--cream)}
-.manifestoCopy{padding:38px 3.2vw}
-.manifestoCopy h2,.constitutionIntro h2,.collectiveCopy h2,.textTile h2,.shopIntro h2,.joinCopy h2{margin:0;font-size:clamp(2.7rem,4.4vw,5rem);line-height:.94;letter-spacing:-.05em}
-.manifestoCopy>p:not(.label){max-width:370px;font-size:.86rem;line-height:1.5}
-.manifestoVisual{position:relative;min-height:430px}
-.constitution{display:grid;grid-template-columns:.42fr 1.58fr;background:var(--forest);color:white}
-.constitutionIntro{padding:34px 3.2vw}
-.constitutionIntro>p:not(.label){max-width:390px;font-size:.82rem;line-height:1.45}
-.constitutionIntro h2{font-size:clamp(2.3rem,3.6vw,4rem)}
-.constitutionRight{display:block}
-.principles{display:grid;grid-template-columns:repeat(3,1fr);padding:24px}
-.principles article{padding:18px;border-right:1px solid rgba(255,255,255,.22);border-bottom:1px solid rgba(255,255,255,.22)}
-.principles article:nth-child(3n){border-right:0}
-.principles article:nth-child(n+4){border-bottom:0}
-.principleIcon{font-size:1.2rem}
-.principles h3{margin:7px 0 4px;font-size:.8rem}
-.principles p{margin:0;color:rgba(255,255,255,.65);font-size:.68rem;line-height:1.35}
 
-.collective{display:grid;grid-template-columns:.34fr 1.66fr;min-height:430px;background:#101812;color:white}
-.collectiveCopy{display:flex;padding:36px 3.2vw;flex-direction:column;justify-content:flex-end}
-.collectiveCopy h2{font-size:clamp(3rem,4.8vw,5.2rem)}
-.collectiveCopy>p:not(.label){font-size:.84rem;line-height:1.45}
-.collectiveImage{position:relative;min-height:430px}
-.collectiveImage .cover{object-position:center 42%}
-.impactRides{display:grid;grid-template-columns:.8fr .65fr .72fr 1.15fr;min-height:275px}
-.textTile{padding:30px 3.2vw;background:var(--paper)}
-.textTile h2{font-size:clamp(2rem,2.8vw,3.1rem)}
-.textTile>p:not(.label){font-size:.79rem;line-height:1.42}
-.imagePanel{position:relative;min-height:275px}
-.shop{display:grid;grid-template-columns:.62fr 2.38fr;gap:2vw;padding:30px 3.2vw;background:var(--cream)}
-.shopIntro h2{font-size:clamp(2.4rem,3.6vw,4rem)}
-.shopIntro>p:not(.label){font-size:.78rem;line-height:1.4}
-.productGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
-.productGrid article{text-align:center}
-.productVisual{position:relative;display:grid;aspect-ratio:1.35;place-items:center;background:#e8e3dc;overflow:hidden}
-.productVisual::before{content:"";position:absolute;width:28%;height:63%;border-radius:25% 25% 15% 15%;background:#66705a}
-.productVisual.bib::before{width:20%;height:68%;border-radius:12% 12% 20% 20%;background:#171b19}
-.productVisual.cap::before{width:43%;height:27%;border-radius:70% 70% 20% 20%;background:linear-gradient(90deg,#f6efe4 0 52%,#aa7177 52%)}
-.productVisual.socks::before{width:12%;height:58%;border-radius:20%;background:#3f4b3b;box-shadow:25px 0 0 #3f4b3b}
-.productVisual span{position:relative;z-index:1;font-size:.5rem;font-weight:900}
-.productGrid h3{margin:9px 0 3px;font-size:.78rem}
-.productGrid p{margin:0;color:var(--muted);font-size:.52rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
-.join{display:grid;grid-template-columns:1fr 1fr;background:var(--cream)}
-.joinVisual{position:relative;min-height:200px}
-.joinShade{position:absolute;inset:0;background:rgba(17,24,19,.24)}
-.joinCopy{position:absolute;z-index:2;left:3.2vw;bottom:28px;color:white}
-.joinCopy h2{max-width:620px;font-size:clamp(2.2rem,3.1vw,3.5rem)}
-.joinForm{display:flex;padding:30px 5vw;flex-direction:column;justify-content:center}
-.joinForm>p{font-size:.78rem}
-.joinForm form{display:grid;grid-template-columns:1fr auto;border:1px solid #a6aaa4}
-.joinForm input{min-width:0;padding:12px;border:0;background:transparent}
-.joinForm button{padding:0 22px;border:0;background:var(--forest);color:white;font-size:.61rem;font-weight:900;letter-spacing:.09em;text-transform:uppercase}
-.joinForm small{margin-top:9px;color:var(--muted);font-size:.6rem}
-footer{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:18px 3.2vw;background:#111713;color:white}
-footer strong{font-size:1.25rem}
-footer nav{display:flex;gap:24px;font-size:.55rem;font-weight:900;letter-spacing:.09em;text-transform:uppercase}
-footer span{justify-self:end;color:rgba(255,255,255,.55);font-size:.57rem}
-.srOnly{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-
-@media(max-width:1000px){
-  .header{grid-template-columns:1fr auto}.header nav{display:none}
-  .manifesto,.constitution,.collective,.impactRides,.shop,.join{grid-template-columns:1fr}
-  .constitutionRight{display:block}
-  .coffeeImage,.manifestoVisual,.collectiveImage,.imagePanel{min-height:360px}
-  .principles{grid-template-columns:1fr 1fr}
-  .productGrid{grid-template-columns:1fr 1fr}
-  footer{grid-template-columns:1fr}
-  footer nav{margin:16px 0;flex-wrap:wrap}
-  footer span{justify-self:start}
+* {
+  box-sizing: border-box;
 }
-@media(max-width:600px){
-  .header{padding:14px 20px}.logo{font-size:1.15rem}
-  .hero{height:82svh;min-height:650px}
-  .heroPhoto{object-position:62% center}
-  .heroCopy{left:22px;right:22px;bottom:42px}
-  .heroCopy h1{font-size:4rem}
-  .scrollHint{display:none}
-  .manifestoCopy,.constitutionIntro,.collectiveCopy,.textTile,.shop,.joinForm{padding:32px 22px}
-  .manifestoCopy h2,.constitutionIntro h2,.collectiveCopy h2,.textTile h2,.shopIntro h2,.joinCopy h2{font-size:2.8rem}
-  .principles{grid-template-columns:1fr}
-  .productGrid{grid-template-columns:1fr}
-  .joinForm form{grid-template-columns:1fr}
-  .joinForm button{padding:12px}
-  footer{padding:26px 22px}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+.cover {
+  object-fit: cover;
+}
+
+.label {
+  margin: 0 0 16px;
+
+  font-size: 0.62rem;
+  font-weight: 900;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.labelLight {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.textLink {
+  display: inline-block;
+
+  margin-top: 15px;
+
+  font-size: 0.62rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.lightLink {
+  color: white;
+}
+
+.buttonLight {
+  display: inline-block;
+
+  padding: 15px 22px;
+
+  background: white;
+  color: var(--ink);
+
+  font-size: 0.65rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.srOnly {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+
+  border: 0;
+}
+
+/* HERO */
+
+.hero {
+  position: relative;
+
+  min-height: 640px;
+  height: 55vw;
+  max-height: 780px;
+  overflow: hidden;
+}
+
+.heroPhoto {
+  object-position: center 48%;
+}
+
+.heroShade {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(6, 14, 10, 0.58),
+      rgba(6, 14, 10, 0.03) 68%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(6, 14, 10, 0.32),
+      transparent 48%
+    );
+}
+
+.heroCopy {
+  position: absolute;
+  z-index: 2;
+  left: 3.2vw;
+  bottom: 58px;
+
+  max-width: 650px;
+
+  color: white;
+}
+
+.heroCopy h1 {
+  margin: 0;
+
+  font-size: clamp(4.2rem, 7vw, 7.4rem);
+  line-height: 0.84;
+  letter-spacing: -0.065em;
+}
+
+.heroCopy p {
+  margin: 22px 0 27px;
+
+  font-size: 1.2rem;
+  line-height: 1.45;
+}
+
+.scrollHint {
+  position: absolute;
+  right: 3vw;
+  bottom: 30px;
+  z-index: 2;
+
+  color: white;
+
+  font-size: 0.63rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* MANIFESTO */
+
+.manifesto {
+  display: grid;
+  grid-template-columns: 0.58fr 1.42fr;
+
+  min-height: 430px;
+
+  background: var(--cream);
+}
+
+.manifestoCopy {
+  padding: 38px 3.2vw;
+}
+
+.manifestoCopy h2,
+.constitutionIntro h2,
+.collectiveCopy h2,
+.textTile h2,
+.homeShopIntro h2,
+.joinCopy h2 {
+  margin: 0;
+
+  font-size: clamp(2.7rem, 4.4vw, 5rem);
+  line-height: 0.94;
+  letter-spacing: -0.05em;
+}
+
+.manifestoCopy > p:not(.label) {
+  max-width: 370px;
+
+  font-size: 0.86rem;
+  line-height: 1.5;
+}
+
+.manifestoVisual {
+  position: relative;
+
+  min-height: 430px;
+  overflow: hidden;
+}
+
+/* CONSTITUTION */
+
+.constitution {
+  display: grid;
+  grid-template-columns: 0.42fr 1.58fr;
+
+  background: var(--forest);
+  color: white;
+}
+
+.constitutionIntro {
+  padding: 34px 3.2vw;
+}
+
+.constitutionIntro > p:not(.label) {
+  max-width: 390px;
+
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.constitutionIntro h2 {
+  font-size: clamp(2.3rem, 3.6vw, 4rem);
+}
+
+.constitutionRight {
+  display: block;
+}
+
+.principles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  padding: 24px;
+}
+
+.principles article {
+  padding: 18px;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.22);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.principles article:nth-child(3n) {
+  border-right: 0;
+}
+
+.principles article:nth-child(n + 4) {
+  border-bottom: 0;
+}
+
+.principleIcon {
+  font-size: 1.2rem;
+}
+
+.principles h3 {
+  margin: 7px 0 4px;
+
+  font-size: 0.8rem;
+}
+
+.principles p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 0.68rem;
+  line-height: 1.35;
+}
+
+/* COLLECTIVE */
+
+.collective {
+  display: grid;
+  grid-template-columns: 0.34fr 1.66fr;
+
+  min-height: 430px;
+
+  background: #101812;
+  color: white;
+}
+
+.collectiveCopy {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  padding: 36px 3.2vw;
+}
+
+.collectiveCopy h2 {
+  font-size: clamp(3rem, 4.8vw, 5.2rem);
+}
+
+.collectiveCopy > p:not(.label) {
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
+.collectiveImage {
+  position: relative;
+
+  min-height: 430px;
+  overflow: hidden;
+}
+
+.collectiveImage .cover {
+  object-position: center 42%;
+}
+
+/* RIDE IT FORWARD + RIDES */
+
+.impactRides {
+  display: grid;
+  grid-template-columns: 0.8fr 0.65fr 0.72fr 1.15fr;
+
+  min-height: 275px;
+}
+
+.textTile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding: 30px 3.2vw;
+
+  background: var(--paper);
+}
+
+.textTile h2 {
+  font-size: clamp(2rem, 2.8vw, 3.1rem);
+}
+
+.textTile > p:not(.label) {
+  font-size: 0.79rem;
+  line-height: 1.42;
+}
+
+.textTile .textLink {
+  margin-top: auto;
+  padding-top: 22px;
+}
+
+.imagePanel {
+  position: relative;
+
+  min-height: 275px;
+  overflow: hidden;
+}
+
+/* HOMEPAGE SHOP */
+
+.homeShop {
+  display: grid;
+  grid-template-columns: 0.62fr 2.38fr;
+  gap: 2vw;
+
+  padding: 30px 3.2vw;
+
+  background: var(--cream);
+}
+
+.homeShopIntro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  min-width: 0;
+}
+
+.homeShopIntro h2 {
+  font-size: clamp(2.4rem, 3.6vw, 4rem);
+}
+
+.homeShopIntro > p:not(.label) {
+  max-width: 370px;
+
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
+.homeShopIntro .textLink {
+  margin-top: 18px;
+}
+
+.homeProductGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+
+  min-width: 0;
+}
+
+.homeProductCard {
+  display: block;
+
+  min-width: 0;
+
+  color: inherit;
+  text-decoration: none;
+}
+
+.homeProductImage {
+  position: relative;
+
+  width: 100%;
+  aspect-ratio: 1.35;
+  overflow: hidden;
+
+  background: #e8e3dc;
+}
+
+.homeProductImage img {
+  object-fit: cover;
+
+  transition: transform 300ms ease;
+}
+
+.homeProductCard:hover .homeProductImage img {
+  transform: scale(1.025);
+}
+
+.homeProductInfo {
+  padding-top: 9px;
+
+  text-align: center;
+}
+
+.homeProductInfo h3 {
+  margin: 0 0 3px;
+
+  font-size: 0.78rem;
+}
+
+.homeProductInfo p {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 0.52rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* JOIN */
+
+.join {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  background: var(--cream);
+}
+
+.joinVisual {
+  position: relative;
+
+  min-height: 200px;
+  overflow: hidden;
+}
+
+.joinShade {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background: rgba(17, 24, 19, 0.24);
+}
+
+.joinCopy {
+  position: absolute;
+  z-index: 2;
+  left: 3.2vw;
+  bottom: 28px;
+
+  color: white;
+}
+
+.joinCopy h2 {
+  max-width: 620px;
+
+  font-size: clamp(2.2rem, 3.1vw, 3.5rem);
+}
+
+.joinForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 30px 5vw;
+}
+
+.joinForm > p {
+  font-size: 0.78rem;
+}
+
+.joinForm form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+
+  border: 1px solid #a6aaa4;
+}
+
+.joinForm input {
+  min-width: 0;
+  padding: 12px;
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+}
+
+.joinForm button {
+  padding: 0 22px;
+  border: 0;
+
+  background: var(--forest);
+  color: white;
+  cursor: pointer;
+
+  font-size: 0.61rem;
+  font-weight: 900;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.joinForm small {
+  margin-top: 9px;
+
+  color: var(--muted);
+
+  font-size: 0.6rem;
+}
+
+/* FOOTER */
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+
+  padding: 18px 3.2vw;
+
+  background: #111713;
+  color: white;
+}
+
+footer strong {
+  font-size: 1.25rem;
+}
+
+footer nav {
+  display: flex;
+  gap: 24px;
+
+  font-size: 0.55rem;
+  font-weight: 900;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+footer span {
+  justify-self: end;
+
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 0.57rem;
+}
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+  .manifesto,
+  .constitution,
+  .collective,
+  .impactRides,
+  .homeShop,
+  .join {
+    grid-template-columns: 1fr;
+  }
+
+  .constitutionRight {
+    display: block;
+  }
+
+  .manifestoVisual,
+  .collectiveImage,
+  .imagePanel {
+    min-height: 360px;
+  }
+
+  .principles {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .principles article,
+  .principles article:nth-child(3n),
+  .principles article:nth-child(n + 4) {
+    border-right: 1px solid rgba(255, 255, 255, 0.22);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+  }
+
+  .principles article:nth-child(2n) {
+    border-right: 0;
+  }
+
+  .principles article:nth-last-child(-n + 2) {
+    border-bottom: 0;
+  }
+
+  .homeProductGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  footer {
+    grid-template-columns: 1fr;
+  }
+
+  footer nav {
+    margin: 16px 0;
+    flex-wrap: wrap;
+  }
+
+  footer span {
+    justify-self: start;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .hero {
+    height: 82svh;
+    min-height: 650px;
+  }
+
+  .heroPhoto {
+    object-position: 62% center;
+  }
+
+  .heroCopy {
+    right: 22px;
+    bottom: 42px;
+    left: 22px;
+  }
+
+  .heroCopy h1 {
+    font-size: 4rem;
+  }
+
+  .scrollHint {
+    display: none;
+  }
+
+  .manifestoCopy,
+  .constitutionIntro,
+  .collectiveCopy,
+  .textTile,
+  .homeShop,
+  .joinForm {
+    padding: 32px 22px;
+  }
+
+  .manifestoCopy h2,
+  .constitutionIntro h2,
+  .collectiveCopy h2,
+  .textTile h2,
+  .homeShopIntro h2,
+  .joinCopy h2 {
+    font-size: 2.8rem;
+  }
+
+  .principles {
+    grid-template-columns: 1fr;
+  }
+
+  .principles article,
+  .principles article:nth-child(2n),
+  .principles article:nth-child(3n),
+  .principles article:nth-child(n + 4),
+  .principles article:nth-last-child(-n + 2) {
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+  }
+
+  .principles article:last-child {
+    border-bottom: 0;
+  }
+
+  .homeProductGrid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .homeProductImage {
+    aspect-ratio: 1.15;
+  }
+
+  .joinForm form {
+    grid-template-columns: 1fr;
+  }
+
+  .joinForm button {
+    padding: 12px;
+  }
+
+  footer {
+    padding: 26px 22px;
+  }
 }
