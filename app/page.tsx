@@ -251,39 +251,52 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="shop" className="shop">
-          <div className="shopIntro">
-            <p className="label">06 / Shop</p>
+       <section id="shop" className="shop">
+  <div className="shopIntro">
+    <p className="label">06 / Shop</p>
 
-            <h2>
-              Essentials
-              <br />
-              for the ride.
-            </h2>
+    <h2>
+      Essentials
+      <br />
+      for the ride.
+    </h2>
 
-            <p>
-              Thoughtful products. Responsible materials. Made in Europe. For
-              the roads and the moments that matter.
-            </p>
+    <p>
+      Thoughtful products. Responsible materials. Made in Europe. For the roads
+      and the moments that matter.
+    </p>
 
-            <Link className="textLink" href="/shop">
-              View collection →
-            </Link>
-          </div>
+    <Link className="textLink" href="/shop">
+      View collection →
+    </Link>
+  </div>
 
-          <div className="productGrid">
-            {products.map(([name, className]) => (
-              <article key={name}>
-                <div className={`productVisual ${className}`}>
-                  <span>BE:LON</span>
-                </div>
+  <div className="productGrid">
+    {products.map((product) => (
+      <Link
+        key={product.name}
+        href="/shop"
+        className="productCard"
+        aria-label={`View ${product.name}`}
+      >
+        <div className="productImage">
+          <Image
+            src={product.image}
+            alt={product.alt}
+            fill
+            sizes="(max-width: 850px) 100vw, 25vw"
+            className="cover"
+          />
+        </div>
 
-                <h3>{name}</h3>
-                <p>Coming soon</p>
-              </article>
-            ))}
-          </div>
-        </section>
+        <div className="productInfo">
+          <h3>{product.name}</h3>
+          <p>Coming soon</p>
+        </div>
+      </Link>
+    ))}
+  </div>
+</section>
 
         <section id="join" className="join">
           <div className="joinVisual">
