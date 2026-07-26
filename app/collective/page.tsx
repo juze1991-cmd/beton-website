@@ -9,15 +9,6 @@ export const metadata = {
     "The BE:LON Collective is a community for people who believe cycling becomes better when more people feel welcome.",
 };
 
-const navigation = [
-  { label: "Manifesto", href: "/manifesto" },
-  { label: "Constitution", href: "/constitution" },
-  { label: "Collective", href: "/collective" },
-  { label: "Ride It Forward", href: "/ride-it-forward" },
-  { label: "Journal", href: "/journal" },
-  { label: "Shop", href: "/shop" },
-];
-
 const values = [
   {
     number: "01",
@@ -45,23 +36,6 @@ export default function CollectivePage() {
   return (
     <main className={styles.page}>
       <Header />
-
-        <nav className={styles.navigation} aria-label="Main navigation">
-          {navigation.map((item) => (
-            <Link
-              key={item.label}
-              href={item.href}
-              className={
-                item.href === "/collective"
-                  ? styles.activeNavigation
-                  : undefined
-              }
-            >
-              {item.label}
-            </Link>
-          ))}
-        </nav>
-      </header>
 
       <section className={styles.hero}>
         <div className={styles.heroCopy}>
