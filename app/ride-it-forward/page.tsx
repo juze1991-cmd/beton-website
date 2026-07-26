@@ -12,23 +12,23 @@ export const metadata = {
 const steps = [
   {
     number: "01",
-    title: "You add something.",
-    text: "When placing an order, you can add €5 or contribute another amount to the Ride It Forward Fund.",
+    title: "Contribute.",
+    text: "When placing an order, you can add €5 or contribute any other amount to the Ride It Forward Fund.",
   },
   {
     number: "02",
     title: "The fund grows.",
-    text: "Every contribution is collected transparently throughout the year. It is not used to discount individual products.",
+    text: "Every contribution becomes part of a shared community fund that grows throughout the year.",
   },
   {
     number: "03",
-    title: "Organisations are proposed.",
-    text: "At the end of the year, BE:LON presents a shortlist of five to ten organisations working to make cycling more accessible.",
+    title: "Organisations are nominated.",
+    text: "At the end of each year, BE:LON presents five to ten organisations that make cycling more accessible.",
   },
   {
     number: "04",
-    title: "The community decides.",
-    text: "The BE:LON community votes on which organisations should receive the money collected through Ride It Forward.",
+    title: "The community votes.",
+    text: "The BE:LON community decides together which organisations receive the fund.",
   },
 ];
 
@@ -103,8 +103,7 @@ export default function RideItForwardPage() {
             </p>
 
             <p>
-              The money does not make an individual jersey cheaper. Instead,
-              all contributions are collected and used to support organisations
+              All contributions are collected and used to support organisations
               that help more people gain access to cycling.
             </p>
 
@@ -152,21 +151,23 @@ export default function RideItForwardPage() {
         <div className={styles.voteContent}>
           <p className={styles.sectionLabel}>The community vote</p>
 
-          <h2>You decide where the money goes.</h2>
+          <h2>You decide where the fund goes.</h2>
 
           <p>
-            At the end of each year, BE:LON selects five to ten organisations
-            whose work matches the purpose of Ride It Forward.
+            Every year, BE:LON presents five to ten organisations whose 
+            work reflects the values of our community.
           </p>
 
           <p>
-            Each organisation is introduced transparently: what it does, who it
-            supports and how the funding could be used.
+            These might be organisations that introduce children to cycling, 
+            create opportunities for underrepresented groups, improve access 
+            to bicycles or make riding safer and more inclusive.
           </p>
 
           <p>
-            The BE:LON community then votes. The result determines which
-            organisations receive the collected fund.
+            Instead of BE:LON making the final decision, every member 
+            of the community gets a vote. The organisations with the 
+            most support receive the Ride It Forward Fund.
           </p>
         </div>
       </section>
@@ -200,13 +201,13 @@ export default function RideItForwardPage() {
 
           <div>
             <p>
-              After every annual vote, BE:LON will publish the result, the
-              selected organisations and how the money is distributed.
+              After every community vote, we publish the organisations selected, 
+              the voting results and the amount each organisation receives.
             </p>
 
             <p>
-              Ride It Forward should remain understandable, traceable and open
-              to the people who helped build it.
+              Ride It Forward belongs to the community—and the community 
+              should always be able to see the impact it creates together.
             </p>
           </div>
         </div>
