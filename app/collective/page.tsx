@@ -44,10 +44,7 @@ const values = [
 export default function CollectivePage() {
   return (
     <main className={styles.page}>
-      <header className={styles.header}>
-        <Link href="/" className={styles.logo}>
-          BE:LON
-        </Link>
+      <Header />
 
         <nav className={styles.navigation} aria-label="Main navigation">
           {navigation.map((item) => (
