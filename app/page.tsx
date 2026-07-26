@@ -251,8 +251,8 @@ export default function Home() {
           </div>
         </section>
 
-       <section id="shop" className="shop">
-  <div className="shopIntro">
+    <section id="shop" className="homeShop">
+  <div className="homeShopIntro">
     <p className="label">06 / Shop</p>
 
     <h2>
@@ -271,15 +271,15 @@ export default function Home() {
     </Link>
   </div>
 
-  <div className="productGrid">
+  <div className="homeProductGrid">
     {products.map((product) => (
       <Link
         key={product.name}
         href="/shop"
-        className="productCard"
+        className="homeProductCard"
         aria-label={`View ${product.name}`}
       >
-        <div className="productImage">
+        <div className="homeProductImage">
           <Image
             src={product.image}
             alt={product.alt}
@@ -289,7 +289,7 @@ export default function Home() {
           />
         </div>
 
-        <div className="productInfo">
+        <div className="homeProductInfo">
           <h3>{product.name}</h3>
           <p>Coming soon</p>
         </div>
