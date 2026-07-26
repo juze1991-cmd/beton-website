@@ -135,7 +135,7 @@ export default function JournalPage() {
       <section className={styles.featured}>
         <div className={styles.featuredImage}>
           <Image
-            src="/journal-featured.webp"
+            src="/journal-featured.jpg.png"
             alt="Two cyclists waiting for another rider on a mountain road"
             fill
             sizes="(max-width: 900px) 100vw, 62vw"
