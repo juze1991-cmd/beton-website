@@ -29,17 +29,17 @@ const principles = [
 const products = [
   {
     name: "Core Jersey",
-    image: "/shop-jersey.webp",
+    image: "/shop-jersey.jpg.png",
     alt: "BE:LON Core Jersey",
   },
   {
     name: "Core Bib",
-    image: "/shop-bib.webp",
+    image: "/shop-bib.jpg.png",
     alt: "BE:LON Core Bib",
   },
   {
     name: "Core Socks",
-    image: "/shop-socks.webp",
+    image: "/shop-socks.jpg.png",
     alt: "BE:LON Core Socks",
   },
 ];
