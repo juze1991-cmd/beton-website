@@ -33,7 +33,7 @@ const stories = [
     category: "People",
     description:
       "Not every meaningful cycling story starts with the newest equipment.",
-    image: "/journal-story-one-bike.webp",
+    image: "/journal-story-one-bike.jpg.png",
     imageAlt: "A person standing beside a well-used bicycle",
     href: "/journal/one-bike-can-change-a-life",
   },
@@ -42,7 +42,7 @@ const stories = [
     category: "Places",
     description:
       "Some roads stay with us long after we have reached the end of them.",
-    image: "/journal-story-road.webp",
+    image: "/journal-story-road.jpg.png",
     imageAlt: "A quiet road passing through a varied landscape",
     href: "/journal/the-road-that-brought-us-here",
   },
@@ -51,7 +51,7 @@ const stories = [
     category: "Behind BE:LON",
     description:
       "Why cycling clothing should help people feel included, not measured.",
-    image: "/journal-story-jersey.webp",
+    image: "/journal-story-jersey.jpg.png",
     imageAlt: "Cycling clothing being prepared on a workshop table",
     href: "/journal/more-than-another-jersey",
   },
@@ -60,7 +60,7 @@ const stories = [
     category: "Community",
     description:
       "Belonging often begins with one person making space for another.",
-    image: "/journal-story-hello.webp",
+    image: "/journal-story-hello.jpg.png",
     imageAlt: "Two cyclists greeting each other before a ride",
     href: "/journal/every-ride-starts-with-hello",
   },
