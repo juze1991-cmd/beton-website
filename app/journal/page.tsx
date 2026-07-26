@@ -73,7 +73,7 @@ export default function JournalPage() {
 
       <section className={styles.hero}>
         <Image
-          src="/journal-hero.webp"
+          src="/journal-hero.jpg.png"
           alt="A diverse cycling community spending time together after a ride"
           fill
           priority
