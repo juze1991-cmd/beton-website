@@ -236,9 +236,9 @@ export default function Home() {
               New places. New people.
             </p>
 
-            <Link href="/journal" className="textLink">
-  Read the Journal →
-</Link>
+            <a className="textLink" href="#join"> 
+              Read the journal → </a> 
+          </article>
 
           <div className="imagePanel">
             <Image
