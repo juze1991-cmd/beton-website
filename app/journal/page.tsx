@@ -24,7 +24,7 @@ const stories = [
     category: "Stories",
     description:
       "The best part of a ride sometimes begins after the bikes have stopped.",
-    image: "/journal-story-coffee.webp",
+    image: "/journal-story-coffee.jpg.png",
     imageAlt: "A group of cyclists sharing coffee outside a café",
     href: "/journal/coffee-tastes-better-together",
   },
