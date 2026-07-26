@@ -177,7 +177,7 @@ export default function ShopPage() {
       <section className={styles.production}>
         <div className={styles.productionImage}>
           <Image
-            src="/shop-production.webp"
+            src="/shop-production.jpg.png"
             alt="Cycling clothing being produced in a European workshop"
             fill
             sizes="(max-width: 900px) 100vw, 50vw"
@@ -227,7 +227,7 @@ export default function ShopPage() {
 
         <div className={styles.fitImage}>
           <Image
-            src="/shop-fit.webp"
+            src="/shop-fit.jpg.png"
             alt="Cyclists with different ages and body types wearing BE:LON clothing"
             fill
             sizes="100vw"
