@@ -58,7 +58,7 @@ export default function RideItForwardPage() {
 
       <section className={styles.hero}>
         <Image
-          src="/forward.jpg.png"
+          src="/rideforward.jpg.png"
           alt="A cyclist looking towards a wide mountain landscape"
           fill
           priority
@@ -140,7 +140,7 @@ export default function RideItForwardPage() {
       <section className={styles.vote}>
         <div className={styles.voteVisual}>
           <Image
-            src="/rides.jpg.png"
+            src="/ridesforward.jpg.png"
             alt="A diverse group of cyclists riding together"
             fill
             sizes="(max-width: 900px) 100vw, 50vw"
